@@ -18,11 +18,7 @@ namespace glm
 		typedef mat<3, 3, T, Q> transpose_type;
 		typedef T value_type;
 
-		union {
-			col_type value[3];
-			struct {col_type Col1, Col2, Col3;};
-		};
-		
+		col_type value[3];
 
 	public:
 		// -- Accesses --
