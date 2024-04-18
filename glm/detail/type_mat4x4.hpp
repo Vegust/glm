@@ -18,8 +18,11 @@ namespace glm
 		typedef mat<4, 4, T, Q> transpose_type;
 		typedef T value_type;
 
-	private:
-		col_type value[4];
+		union {
+			col_type value[4];
+			struct {col_type Col1, Col2, Col3, Col4;};
+		};
+		
 
 	public:
 		// -- Accesses --
